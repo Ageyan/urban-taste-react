@@ -43,42 +43,54 @@ function Header({ onOpenModal }) {
     const headerColor = {
         '/': '',
         '/about': 'black',
-        '/contacts': 'black',
+        '/contacts': 'black hover-white',
         '/menu': '',
-        '/breakfast': 'black',
-        '/burgers': 'black',
-        '/bar': 'black',
-        '/bowls': 'black',
-        '/desserts': 'black',
-        '/dishes': 'black',
-        '/pizza': 'black',
-        '/soups': 'black',
+        '/breakfast': 'black hover-white',
+        '/burgers': 'black hover-white',
+        '/bar': 'black hover-white',
+        '/bowls': 'black hover-white',
+        '/desserts': 'black hover-white',
+        '/dishes': 'black hover-white',
+        '/pizza': 'black hover-white',
+        '/soups': 'black hover-white',
     }
 
+    // const secondHeaderColor = {
+    //     '/contacts': 'hover-white',
+    //     '/breakfast': 'hover-white',
+    //     '/burgers': 'hover-white',
+    //     '/bar': 'hover-white',
+    //     '/bowls': 'hover-white',
+    //     '/desserts': 'hover-white',
+    //     '/dishes': 'hover-white',
+    //     '/pizza': 'hover-white',
+    //     '/soups': 'hover-white',
+    // }
+
     const headerClass = headerColor[location.pathname];
-    const contactsPath = location.pathname === '/contacts';
+    // const secondHeaderClass = secondHeaderColor[location.pathname];
     const variant = location.pathname === '/about' ? 'about' : 'default';
 
     return (
         <div className="header">
             <div className="container">
                 <div className="header__container">
-                    <button ref={callRefs.setReference} onClick={toggleCallMenu} className={`header__button ${headerClass} ${contactsPath ? 'hover-white' : '' }`}>
+                    <button ref={callRefs.setReference} onClick={toggleCallMenu} className={`header__button ${headerClass}`}>
                         hot call <IoIosArrowDown  className={`header__button__icon ${showCallMenu ? 'up' : ''} `} />
                     </button>
                     <p className={`header__logo ${headerClass}`}>Urban Taste</p>
-                    <button onClick={onOpenModal} className={`header__button-book ${headerClass} ${contactsPath ? 'hover-white' : '' }`}>book now</button>
+                    <button onClick={onOpenModal} className={`header__button-book ${headerClass}`}>book now</button>
                     {showMenu ? <Icon
                         name='icon-menu-open'
                         ref={menuRefs.setReference}
                         onClick={toggleMenu}
-                        className={`header-menu ${headerClass} ${contactsPath ? 'hover-white' : '' }`}
+                        className={`header-menu ${headerClass}`}
                     /> :
                     <Icon
                         name='icon-menu-closed'
                         ref={menuRefs.setReference}
                         onClick={toggleMenu}
-                        className={`header-menu ${headerClass} ${contactsPath ? 'hover-white' : '' }`}
+                        className={`header-menu ${headerClass}`}
                     />}
                 </div>
                 <HeaderCallMenu variant={variant} callMenu={[showCallMenu, callRefs, callStyles, toggleCallMenuClosed]}/>
