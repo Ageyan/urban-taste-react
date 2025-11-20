@@ -1,0 +1,1 @@
+import{j as r}from"./index-PVqiRScY.js";const h=({name:t,size:s=24,className:e="",...i})=>r.jsx("svg",{...i,className:e,width:s,height:s,"aria-hidden":"true",children:r.jsx("use",{href:`/icons.svg#${t}`})});export{h as I};
