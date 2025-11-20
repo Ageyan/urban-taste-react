@@ -1,0 +1,1 @@
+import{j as t}from"./index-CdCOJJ1D.js";const n="/urban-taste-react/assets/icons-DR5KPEqA.svg",a=({name:e,size:s=24,className:r="",...i})=>t.jsx("svg",{...i,className:r,width:s,height:s,"aria-hidden":"true",children:t.jsx("use",{href:`${n}#${e}`})});export{a as I};
