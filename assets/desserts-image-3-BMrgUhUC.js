@@ -1,0 +1,1 @@
+const s="/urban-taste-react/assets/desserts-image-1-DtAx2Fuw.jpg",e="/urban-taste-react/assets/desserts-image-2-DjPOue35.jpg",t="/urban-taste-react/assets/desserts-image-3-DIW35Msy.jpg";export{s as D,e as a,t as b};
