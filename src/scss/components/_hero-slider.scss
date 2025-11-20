@@ -1,0 +1,73 @@
+.slider-wrapper {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+        display: block;
+        width: 100%;
+        overflow: hidden; 
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    gap: 12px;
+    will-change: transform;
+    align-items: center;
+
+    @media screen and (min-width: $bp-desktop) {
+        gap: 16px;
+    }
+}
+
+/* Каждый слайд — "auto" по ширине, чтобы не было "растягивания" и переносов.
+   Ширину картинки можно задавать фиксированно или через относительные единицы. */
+.slide {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 200px; // можно менять под дизайн; фиксированная ширина стабилизирует трек
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: block;
+
+    @media screen and (min-width: $bp-desktop) {
+        width: 250px;
+        height: 170px;
+    }
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+
+    @media screen and (min-width: $bp-desktop) {
+        width: 60px;
+    }
+}
+
+.gradient.left {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.gradient.right {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}

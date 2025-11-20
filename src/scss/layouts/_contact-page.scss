@@ -1,0 +1,328 @@
+.contact-section {
+    padding: 80px 0px 0px;
+    background-color: var(--color-biege);
+
+    @media screen and (min-width: $bp-mobile) {
+        padding: 100px 0px 0px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 140px 0px 60px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 180px 0px 80px;
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1.1;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 56px;
+            margin-bottom: 30px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 70px;
+            margin-bottom: 40px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 100px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row-reverse;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 40px;
+            max-width: 1280px;
+        }
+    }
+
+    &__info-container {
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            gap: 22px;
+            margin-bottom: 26px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        & li {
+
+            @media screen and (min-width: $bp-mobile) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: $bp-desktop) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__map {
+        display: block;
+        width: 100%;
+        min-height: 200px;
+        margin: 0 auto 20px;
+        border-radius: 10px;
+        border: none;
+        width: 314px;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 380px;
+            min-height: 250px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            min-height: 360px;
+            margin: 0;
+            width: 100%;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            min-height: 450px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer {
+    padding: 30px 0px 15px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    @media screen and (min-width: $bp-mobile) {
+        padding: 36px 0px 25px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 40px 0px 30px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 50px 0px 40px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $bp-mobile) {
+            margin: 0 auto 36px;
+            max-width: 560px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            margin: 0 auto 42px;
+            max-width: 900px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            align-items: flex-start;
+            margin-bottom: 50px;
+            max-width: 1280px;
+        }
+    }
+
+    &__logo {
+        font-size: clamp(12px, 4vw, 40px);
+        font-family: "Monsieur La Doulaise", sans-serif;
+        line-height: 1.5;
+        align-self: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        align-self: flex-start;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 16px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            gap: 22px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            gap: 30px;
+        }
+    }
+
+    &__list li {
+        text-align:center
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 10px;
+        color: var(--color-white);
+        font-family: "Anglecia Pro Display", sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        text-align: center;
+        transition: color 0.3s ease-in-out;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 14px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 18px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 26px;
+        }
+
+        &:hover {
+            color: var(--color-biege);
+            filter: drop-shadow(0px 0px 20px var(--color-white));
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
+        margin-top: 2px;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 12px;
+            margin-bottom: 14px;
+            margin-top: 0;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            margin-top: 5px;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__info li {
+        font-size: 8px;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 16px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 20px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: var(--color-white);
+
+            &:hover {
+                color: var(--color-biege);
+                filter: drop-shadow(0px 0px 20px var(--color-white));
+            }
+        }
+    }
+
+    &__menu-social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu-icon {
+        width: 22px;
+        height: 22px;
+        color: var(--color-white);
+        fill: transparent;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 26px;
+            height: 26px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            width: 32px;
+            height: 32px;
+        }
+        
+        @media screen and (min-width: $bp-desktop) {
+            width: 40px;
+            height: 40px;
+        }
+
+        &:hover {
+            color: var(--color-biege);
+            filter: drop-shadow(0px 0px 20px var(--color-white));
+        }
+    }
+
+    &__copy-text {
+        font-size: 6px;
+        text-align: center;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 8px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 12px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 15px;
+        }
+    }
+}
+

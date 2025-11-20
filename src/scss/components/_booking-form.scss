@@ -1,0 +1,261 @@
+.booking-form {
+    position: relative;
+    text-align: center;
+    background-color: var(--color-white);
+    padding: 40px 50px 16px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 314px;
+
+    @media screen and (min-width: $bp-mobile) {
+        max-width: 380px;
+        padding: 42px 60px 18px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        max-width: 460px;
+        padding: 48px 68px 22px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        max-width: 590px;
+        padding: 60px 95px 30px;
+    }
+
+    &.bottom {
+        margin: 0 auto 20px;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__close-button {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        @media screen and (min-width: $bp-tablet) {
+            top: 16px;
+            right: 16px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            top: 18px;
+            right: 18px;
+        }
+    }
+
+    &__close-button-icon {
+        width: 24px;
+        height: 24px;
+        color: var(--color-black);
+        fill: transparent;
+        transition: color 0.3s ease-in-out;
+
+        @media screen and (min-width: $bp-mobile) {
+            top: 26px;
+            right: 16px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            top: 28px;
+            right: 28px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover {
+            color: var(--color-biege);
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 45px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 16px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            gap: 18px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 20px;
+        }
+
+        &.gap {
+            @media screen and (min-width: $bp-tablet) {
+                gap: 30px;
+            }
+
+            @media screen and (min-width: $bp-desktop) {
+                gap: 40px;
+            }
+        }
+    }
+
+    &__input {
+        padding: 4px 6px;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--color-black);
+        font-family: "Anglecia Pro Display", sans-serif;
+        font-weight: 400;
+        color: black;
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            padding: 6px 8px;
+            font-size: 18px;
+        }
+    }
+
+    &__input:focus {
+        outline: none;
+    }
+
+    &__submit-button {
+        font-size: 20px;
+        text-transform: uppercase;
+        width: 186px;
+        background: var(--color-black);
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        font-family: "Anglecia Pro Display", sans-serif;
+        font-weight: 400;
+        color: var(--color-white);
+        border-radius: 10px;
+        line-height: 100%;
+        margin: 0 auto;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 22px;
+            width: 192px;
+            padding: 12px 26px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 24x;
+            width: 206px;
+            padding: 12px 32px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 30px;
+            width: 220px;
+            padding: 12px 48px;
+        }
+
+        &:hover {
+            background: var(--color-biege);
+            color: var(--color-black);
+        }
+    }
+
+    &__field-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__error-bubble {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        transform: translateY(-50%);
+        background: #d9534f;
+        color: #fff;
+        padding: 2px 2px;
+        border-radius: 8px;
+        font-size: 8px;
+        white-space: wrap;
+        pointer-events: none;
+        opacity: 0;
+        animation: fadeIn 0.2s forwards ease-out;
+        z-index: 2;
+        width: 48px;
+        line-height: 100%;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 9px;
+            width: 58px;
+            padding: 4px 2px;
+            line-height: 1.2;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 10px;
+            width: 64px;
+        }
+
+        @media (min-width: $bp-desktop) {
+            font-size: 12px;
+            width: 85px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__input.error {
+        border-bottom-color: #d9534f !important;
+    }
+
+    &__field-wrapper &__error-bubble {
+        left: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+

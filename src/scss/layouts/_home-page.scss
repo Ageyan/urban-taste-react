@@ -1,0 +1,65 @@
+.home-section {
+    padding: 270px 0 140px;
+    background: url("../../assets/images/home-background.jpg") center/cover no-repeat;
+    min-height: 100vh;
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 250px 0 50px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 280px 0 65px;
+    }
+
+    &__title {
+        font-size: 60px;
+        color: var(--color-white);
+        line-height: 100%;
+        font-weight: 400;
+        margin-bottom: 80px;
+        max-width: 340px;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 70px;
+            max-width: 400px;
+            margin-bottom: 90px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 80px;
+            max-width: 440px;
+            margin: 0 30px 110px auto;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 100px;
+            max-width: 520px;
+            margin: 0 30px 140px auto;
+        }
+    }
+
+    &__button {
+        display: block;
+        font-size: 24px;
+        text-transform: uppercase;
+        background-color: var(--color-white);
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        font-family: "Anglecia Pro Display", sans-serif;
+        font-weight: 400;
+        color: var(--color-black);
+        border-radius: 10px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 28px;
+            padding: 14px 26px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
+        }
+    }
+}
+

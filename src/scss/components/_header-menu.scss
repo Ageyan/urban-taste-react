@@ -1,0 +1,141 @@
+.header-menu {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    color: var(--color-white);
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
+    transition: color 0.8s ease;
+
+    @media screen and (min-width: $bp-mobile) {
+        width: 34px;
+        height: 18px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        width: 42px;
+        height: 21px;
+        left: 0;
+        right: auto;
+        transform: rotateY(180deg);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+        width: 55px;
+        height: 24px;
+    }
+
+    &.black {
+        color: var(--color-black);
+    }
+
+    &:hover {
+        color: var(--color-biege);
+    }
+    
+    &.hover-white:hover {
+        color: var(--color-white);
+    }
+
+    &__dropdown {
+        background-color: var(--color-white);
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        border: 1px solid var(--color-black);
+        border-radius: 10px;
+        padding: 15px 10px;
+        position: absolute;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        will-change: transform, opacity;
+
+        &.about-page {
+            background-color: var(--color-biege);
+        }
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 140px;
+            padding: 18px 12px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 150px;
+            padding: 24px 6px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            width: 170px;
+            padding: 32px 22px;
+        }
+    }
+
+    &__dropdown.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 18px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            gap: 20px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            gap: 25px;
+        }
+    }
+
+    &__list li {
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--color-black);
+        font-family: "Anglecia Pro Display", sans-serif;
+        font-weight: 400;
+        line-height: 100%;
+        text-align: center;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 22px;
+        }
+    
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 24px;
+        }
+    
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 30px;
+        }
+
+        &:hover {
+            filter: drop-shadow(0px 0px 20px var(--color-black));
+        }
+
+        &.active {
+            color: var(--color-biege);
+
+            &.about-page {
+                color: var(--color-white);
+            }
+        }
+    }
+}
