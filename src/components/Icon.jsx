@@ -1,3 +1,4 @@
+import iconsSprite from "../assets/icons.svg";
 
 const Icon = ({ name, size = 24, className = "", ...props }) => (
   <svg
@@ -7,7 +8,7 @@ const Icon = ({ name, size = 24, className = "", ...props }) => (
     height={size}
     aria-hidden="true"
   >
-    <use href={`/icons.svg#${name}`} />
+    <use href={`${iconsSprite}#${name}`} />
   </svg>
 );
 
